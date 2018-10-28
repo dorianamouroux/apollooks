@@ -1,0 +1,14 @@
+{
+  "name": "apollooks",
+  "version": "0.1.0",
+  "description": "An Apollo Client for React leveraging Hooks",
+  "main": "index.js",
+  "repository": "git@github.com:dorianamouroux/apollooks.git",
+  "author": "Dorian Amouroux <dor.amouroux@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "apollo-client": "^2.3.8",
+    "react": "16.7.0-alpha.0",
+    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
+  },
+}
