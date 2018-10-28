@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const HooksApolloContext = React.createContext(null);
+export const ApollooksContext = React.createContext(null);
 
-export default function HooksApolloProvider({ client, children }) {
+export default function ApollooksProvider({ client, children }) {
+  const { Provider } = ApollooksContext
   return (
-    <HooksApolloContext.Provider value={client}>
+    <ApollooksContext.Provider value={client}>
       {children}
-    </HooksApolloContext.Provider>
+    </ApollooksContext.Provider>
   )
 }
 
-HooksApolloProvider.propTypes = {
+ApollooksProvider.propTypes = {
   client: PropTypes.object.isRequired,
   children: PropTypes.any
 }

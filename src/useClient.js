@@ -1,7 +1,9 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 
-import { HooksApolloContext } from './Context'
+import { ApollooksContext } from './Context'
+
+console.log(React)
 
 export default function useClient() {
-  return useContext(HooksApolloContext)
+  return useContext(ApollooksContext)
 }
