@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
-import App from './App';
-
 import { Router } from "@reach/router"
 import { Provider } from '../../dist/apollooks'
 
-const client = new ApolloClient({ uri: 'https://graphql-pokemon.now.sh' });
+import Home from './Home';
+import Channel from './Channel';
+
+const client = new ApolloClient({ uri: 'https://apollooks-server.now.sh/graphql' });
 
 ReactDOM.render(
   <Provider client={client}>
     <Router>
-      <App path="/:pokemonName"/>
+      <Channel path="/channel/:id"/>
+      <Home path="/"/>
     </Router>
   </Provider>,
   document.getElementById("root"));
