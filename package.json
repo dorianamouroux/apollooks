@@ -7,7 +7,8 @@
   "author": "Dorian Amouroux <dor.amouroux@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build-example": "cd example ; npx parcel build index.html"
   },
   "peerDependencies": {
     "apollo-client": "^2.3.8",
