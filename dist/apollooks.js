@@ -112,11 +112,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! exports provided: Provider, useApolloClient, useQuery */
+/*! exports provided: Provider, useApolloClient, useQuery, useMutation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Context */ \"./src/Context.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Provider\", function() { return _Context__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _useClient__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useClient */ \"./src/useClient.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useApolloClient\", function() { return _useClient__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _useQuery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useQuery */ \"./src/useQuery.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useQuery\", function() { return _useQuery__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n\n\n\n\n//# sourceURL=webpack://apollooks/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Context */ \"./src/Context.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Provider\", function() { return _Context__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _useClient__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useClient */ \"./src/useClient.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useApolloClient\", function() { return _useClient__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _useQuery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useQuery */ \"./src/useQuery.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useQuery\", function() { return _useQuery__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n/* harmony import */ var _useMutation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./useMutation */ \"./src/useMutation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useMutation\", function() { return _useMutation__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n\n\n\n\n\n//# sourceURL=webpack://apollooks/./src/index.js?");
 
 /***/ }),
 
@@ -129,6 +129,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Con
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return useClient; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Context */ \"./src/Context.js\");\n\n\nfunction useClient() {\n  return Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useContext\"])(_Context__WEBPACK_IMPORTED_MODULE_1__[\"ApollooksContext\"]);\n}\n\n//# sourceURL=webpack://apollooks/./src/useClient.js?");
+
+/***/ }),
+
+/***/ "./src/useMutation.js":
+/*!****************************!*\
+  !*** ./src/useMutation.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return useMutation; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _useClient__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useClient */ \"./src/useClient.js\");\n\n\nfunction useMutation(mutation, variables) {\n  var client = Object(_useClient__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  var mutate = Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useCallback\"])(function () {\n    return client.mutate({\n      mutation: mutation,\n      variables: variables\n    });\n  }, [mutation, JSON.stringify(variables)]);\n  return mutate;\n}\n\n//# sourceURL=webpack://apollooks/./src/useMutation.js?");
 
 /***/ }),
 
